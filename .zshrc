@@ -101,6 +101,9 @@ source $ZSH/oh-my-zsh.sh
 
 # export
 export XDG_CONFIG_HOME=~/.config
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # 自動補完
 autoload -Uz compinit; compinit

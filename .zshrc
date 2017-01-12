@@ -145,9 +145,4 @@ alias cp='cp -iv'
 alias mkdir='mkdir -pv'
 alias rm="rm -rv"
 
-# tmux 自動起動
-if [ -z $TMUX ]; then
-	tmux -2
-fi
-
 # }}}

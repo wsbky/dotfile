@@ -98,27 +98,22 @@ endif
 
 nnoremap <C-t> :terminal<CR>
 
-nnoremap <C-u><C-f> :Unite<Space>file<CR>
-nnoremap <C-u><C-b> :Unite<Space>buffer<CR>
-nnoremap <C-u><C-f><C-b> :Unite<Space>file<Space>buffer<CR>
-nnoremap <C-u><C-f><C-n> :Unite<Space>file<file
+nnoremap <C-u><C-f> :<C-u>Unite<Space>file<CR>
+nnoremap <C-u><C-b> :<C-u>Unite<Space>buffer<CR>
+nnoremap <C-u><C-f><C-b> :<C-u>Unite<Space>file<Space>buffer<CR>
+nnoremap <C-u><C-f><C-n> :<C-u>Unite<Space>file<file
 
 nnoremap <F3> :noh<CR>
 
 nnoremap <C-i> :call dein#install()<CR>
 
-nnoremap <C-m><C-a> ggvGd
+nnoremap <C-m><C-a> ggvG$d
 
 " }}} 
 " -----------------------------------------------
 
-
-
-
-
 "Python3 support
-let g:python3_host_prog = expand('$HOME') . '/.pyenv/shims/python'
-
+let g:python3_host_prog = '/Users/koichi/.pyenv/shims/python3'
 " -----プラグイン-----
 
 " {{{
@@ -181,7 +176,7 @@ colorscheme solarized
 
 " --deoplete--
 " {{{
-" Use deoplete
+" Use deoplete.
 let g:deoplete#enable_at_startup = 1
 " }}}
 

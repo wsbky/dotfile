@@ -301,3 +301,11 @@ function! s:unite_my_settings()
 	imap <buffer> jj <Plug>(unite_insert_leave)
 endfunction
 " }}}
+
+" python3 plugins
+call remote#host#RegisterPlugin('python3', '/home/shougo/.nvim/rplugin/python3/snake.py', [
+      \ {'sync': 1, 'name': 'SnakeStart', 'type': 'command', 'opts': {}},
+     \ ])
+call remote#host#RegisterPlugin('python3', '/home/shougo/work/deoplete.nvim/rplugin/python3/deoplete.py', [
+      \ {'sync': 1, 'name': 'DeopleteInitializePython', 'type': 'command', 'opts': {}},
+     \ ])

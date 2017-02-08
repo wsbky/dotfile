@@ -73,6 +73,9 @@ set list
 " 保存を確認
 set confirm
 
+" use powerline font
+let g:Powerline_symbols = 'fancy'
+
 
 " -----------------------------------------------
 
@@ -206,17 +209,60 @@ endif
 " {{{
 set laststatus=2
 let g:lightline = {
-\   'colorscheme': 'wombat',
-\}
-let g:lightline.component = {
-    \ 'lineinfo': '%3l[%L]:%-2v'}
-" }}}
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'filename' ] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'LightlineFugitive',
+      \   'readonly': 'LightlineReadonly',
+      \   'modified': 'LightlineModified',
+      \   'filename': 'LightlineFilename'
+      \ },
+      \ 'separator': { 'left': '' , 'right': '' },
+      \ 'subseparator': { 'left': '' , 'right': '' }
+      \ }
 
-" --indentLine--
-" {{{
-let g:indentLine_color_term = 111
-let g:indentLine_color_gui = '#708090'
-let g:indentLine_char = '¦'
+function! LightlineModified()
+  if &filetype == "help"
+    return ""
+  elseif &modified
+    return "+"
+  elseif &modifiable
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightlineReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return ' '
+  else
+    return ""
+  endif
+endfunction
+
+function! LightlineFugitive()
+  return exists('*fugitive#head') ? fugitive#head() : ''
+endfunction
+
+function! LightlineFilename()
+  return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
+       \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+       \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+endfunction
+
+function! LightlineFugitive()
+  if exists("*fugitive#head")
+    let branch = fugitive#head()
+    return branch !=# '' ? ' '.branch : ''
+  endif
+  return ''
+endfunction
 " }}}
 
 " --quickrun.vim--

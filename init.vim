@@ -113,7 +113,7 @@ nnoremap <C-i> :call dein#install()<CR>
 nnoremap <C-m><C-a> ggvG$d
 
 " }}} 
-" -----------------------------------------------
+" ------------------------------------------------
 
 "Python3 support
 let g:python3_host_prog = '/Users/koichi/.pyenv/shims/python3'

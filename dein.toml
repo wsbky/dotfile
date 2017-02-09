@@ -90,3 +90,9 @@ repo = 'tweekmonster/deoplete-clang2'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+
+[[plugins]]
+repo = 'Shougo/vimshell.vim'

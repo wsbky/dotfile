@@ -1,7 +1,7 @@
 # dotfile
 
 ## Environment
-* OS     :  MacOS Sierra 10.12.3 bata
+* OS     :  MacOS Sierra 10.12.4 beta
 * Shell  :  zsh
 * Editor :  NeoVim
 * PC     :  MacBook Air (13-inch, Early 2015)

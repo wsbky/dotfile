@@ -89,7 +89,6 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -104,6 +103,10 @@ export XDG_CONFIG_HOME=~/.config
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# export PATH=~/bin:$PATH
+
+export PATH=~/.local/bin:$PATH
 
 # 自動補完
 autoload -Uz compinit; compinit
@@ -141,8 +144,16 @@ alias vim='nvim'
 
 alias ls='ls -G'
 alias mv='mv -iv'
-alias cp='cp -iv'
+alias cp='cp -ivr'
 alias mkdir='mkdir -pv'
-alias rm="rm -rv"
+alias rm='rm -rv'
+
+alias ...='../..'
+alias .,.='../../..'
+
+# tmux 自動起動
+if [ -z $TMUX ]; then
+	tmux -2
+fi
 
 # }}}

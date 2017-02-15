@@ -9,3 +9,7 @@
 * RAM    :  4GB
 * Font   :  Ricty Regular for Powerline
 
+### Python version
+* python2 : 2.7.13
+* python3 : 3.6.0
+* python manager: pyenv

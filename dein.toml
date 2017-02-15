@@ -96,3 +96,12 @@ repo = 'vim-syntastic/syntastic'
 
 [[plugins]]
 repo = 'Shougo/vimshell.vim'
+
+[[plugins]]
+repo = 'sudar/vim-arduino-syntax'
+
+[[plugins]]
+repo = 'itchyny/calendar.vim'
+
+[[plugins]]
+repo = 'whatyouhide/vim-tmux-syntax'

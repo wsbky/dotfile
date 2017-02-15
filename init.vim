@@ -112,10 +112,15 @@ nnoremap <C-i> :call dein#install()<CR>
 
 nnoremap <C-m><C-a> ggvG$d
 
+noremap <C-m><C-n> :NERDTree<CR>
+
 " }}} 
 " ------------------------------------------------
 
-"Python3 support
+" python2 support
+let g:python_host_prog = '/Users/koichi/.pyenv/shims/python2.7'
+
+" Python3 support
 let g:python3_host_prog = '/Users/koichi/.pyenv/shims/python3'
 " -----プラグイン-----
 
@@ -340,6 +345,12 @@ let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
 
 " }}}
+"
+
+" use calendar.vim
+let g:calendar_frame = 'default'
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
 
 
 " --quickrun.vim--

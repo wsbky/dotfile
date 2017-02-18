@@ -29,8 +29,7 @@ ZSH_THEME="ys"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# Uncomment the following line to change how often to auto-update (in days).  export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -99,10 +98,13 @@ source $ZSH/oh-my-zsh.sh
 # my setting
 
 # export
-export XDG_CONFIG_HOME=~/.config
+export XDG_CONFIG_HOME=$HOME/.config
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+export XDG_CONFIG_DIRS=$HOME/.config
+
+export LC_ALL='ja_JP.UTF-8'
 
 # export PATH=~/bin:$PATH
 
@@ -147,13 +149,18 @@ alias mv='mv -iv'
 alias cp='cp -ivr'
 alias mkdir='mkdir -pv'
 alias rm='rm -rv'
+alias cat='cat -n'
 
 alias ...='../..'
-alias .,.='../../..'
+alias ....='../../..'
+
+alias gpom='git push origin master'
+alias gpul='git pull origin master'
 
 # tmux 自動起動
 if [ -z $TMUX ]; then
 	tmux -2
 fi
+
 
 # }}}

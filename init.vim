@@ -110,7 +110,8 @@ nnoremap <F3> :noh<CR>
 
 nnoremap <C-i> :call dein#install()<CR>
 
-nnoremap <C-m><C-a> ggvG$d
+nnoremap <C-m><C-d> ggvG$d
+nnoremap <C-m><C-y> ggvG$y
 
 noremap <C-m><C-n> :NERDTree<CR>
 

@@ -106,7 +106,7 @@ nnoremap <C-u><C-b> :<C-u>Unite<Space>buffer<CR>
 nnoremap <C-u><C-f><C-b> :<C-u>Unite<Space>file<Space>buffer<CR>
 nnoremap <C-u><C-f><C-n> :<C-u>Unite<Space>file<file
 
-nnoremap <F3> :noh<CR>
+nnoremap <F4> :Noh<CR>
 
 nnoremap <C-i> :call dein#install()<CR>
 

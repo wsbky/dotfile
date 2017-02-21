@@ -10,6 +10,24 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# source for zplug
+source ~/.zplug/init.zsh
+
+# (1) プラグインを定義する
+zplug 'zsh-users/zsh-autosuggestions'
+zplug "b4b4r07/enhancd", use:enhancd.sh
+
+# (2) インストールする
+if ! zplug check --verbose; then
+  printf 'Install? [y/N]: '
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+
+zplug load --verbose
+
+
 # Customize to your needs...
 
 # export

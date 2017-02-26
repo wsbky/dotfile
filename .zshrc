@@ -76,9 +76,9 @@ alias gpom='git push origin master'
 alias gpul='git pull origin master'
 
 # tmux 自動起動
-if [ -z $TMUX ]; then
-  tmux -2
-  fi
+#if [ -z $TMUX ]; then
+#  tmux -2
+#  fi
 
 
   # }}}

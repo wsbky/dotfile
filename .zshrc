@@ -19,6 +19,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export XDG_CONFIG_DIRS=$HOME/.config
 
+export TERM=xterm-256color
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
@@ -73,12 +75,17 @@ alias ...='../..'
 alias ....='../../..'
 
 alias gpom='git push origin master'
-alias gpul='git pull origin master'
+alias gpam='git push origin master && git pull origin master'
+alias gpum='git pull origin master'
+alias gpod='git push origin develop'
+alias gpud='git pull origin develop'
+
+alias tmkal='tmux kill-session -a'
 
 # tmux 自動起動
-#if [ -z $TMUX ]; then
-#  tmux -2
-#  fi
+if [ -z $TMUX ]; then
+  tmux -2
+  fi
 
 
   # }}}

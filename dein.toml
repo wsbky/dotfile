@@ -86,9 +86,6 @@ repo = 'cespare/vim-toml'
 repo = 'zchee/libclang-python3'
 
 [[plugins]]
-repo = 'tweekmonster/deoplete-clang2'
-
-[[plugins]]
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
@@ -109,3 +106,23 @@ repo = 'whatyouhide/vim-tmux-syntax'
 [[plugins]]
 repo = 'osyo-manga/vim-monster'
 
+[[plugins]]
+repo = 'landaire/deoplete-swift'
+
+[[plugins]]
+repo = 'kballard/vim-swift'
+
+[[plugins]]
+repo = 'keith/swift.vim'
+
+[[plugins]]
+repo = 'itchyny/vim-parenmatch'
+
+[[plugins]]
+repo = 'itchyny/vim-cursorword'
+
+[[plugins]]
+repo = 'carlitux/deoplete-ternjs'
+
+[[plugins]]
+repo = 'tweekmonster/deoplete-clang2'

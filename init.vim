@@ -177,18 +177,45 @@ command! DeinClean :call s:deinClean()f
 filetype plugin indent on
 " }}}
 
-"color scheme
+" --color scheme--
 let g:solarized_termcolors=256
 syntax enable
 set background=dark
+autocmd ColorScheme * highlight LineNr ctermfg=245 ctermbg=239
+autocmd ColorScheme * highlight DiffAdd ctermfg=64 ctermbg=239
+autocmd ColorScheme * highlight DiffChange ctermfg=136 ctermbg=239
+autocmd ColorScheme * highlight DiffDelete ctermfg=124 ctermbg=239
+autocmd ColorScheme * highlight DiffText ctermfg=33 ctermbg=239
+autocmd ColorScheme * highlight Comment ctermfg=237 guifg=Blue
+autocmd ColorScheme * highlight Normal ctermfg=246
 colorscheme solarized
+let g:solarized_termtrans=1
+syntax enable
 
 " --deoplete--
 " {{{
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+" Use swift complesion
+let g:deoplete#sources#swift#daemon_autostart = 1
+" Use deoplete.
+let g:tern_request_timeout = 1
+let g:tern_show_signature_in_pum = '0'  " This do disable full signature type on autocomplete
+
+"Add extra filetypes
+let g:tern#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx',
+                \ 'vue',
+                \ '...'
+                \ ]
 " }}}
 
+" match paran
+let g:loaded_matchparen = 1
+
+" use cursor word
+let g:loaded_matchparen = 1
 
 " --Snippet--
 " {{{
@@ -379,6 +406,11 @@ let g:quickrun_config = {
 \ "haskell/watchdogs_checker" : {
 \   "type" : "watchdogs_checker/ghc-mod"
 \ },
+\}
+let g:quickrun_config['swift'] = {
+\ 'command': 'xcrun',
+\ 'cmdopt': 'swift',
+\ 'exec': '%c %o %s',
 \}
 " vim-watchdogs を呼び出し
 call watchdogs#setup(g:quickrun_config)

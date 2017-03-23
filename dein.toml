@@ -126,3 +126,7 @@ repo = 'carlitux/deoplete-ternjs'
 
 [[plugins]]
 repo = 'tweekmonster/deoplete-clang2'
+
+[[plugins]]
+repo = 'eagletmt/neco-ghc'
+

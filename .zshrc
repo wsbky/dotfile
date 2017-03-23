@@ -29,6 +29,7 @@ export LC_ALL='ja_JP.UTF-8'
 # export PATH=~/bin:$PATH
 
 export PATH=~/.local/bin:$PATH
+export PATH=~/.local/cmds:$PATH
 
 # 自動補完
 autoload -Uz compinit; compinit
